@@ -25,7 +25,7 @@ pipeline {
         }
         stage('Syed Ali - Push Image to Dockerhub') {
             steps {
-                sh 'docker push sheeeeeeeeeeeeeeeeeeeeeeeeeeep/project-pipeline:tagname'
+                sh 'docker push $IMAGE_NAME:$IMAGE_TAG'
             }
         }
     }
