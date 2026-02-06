@@ -9,8 +9,7 @@ pipeline {
     stages {
         stage('Syed Ali - Build Docker Image') {
             steps {
-                sh 'docker build -t project-pipeline-temp .'
-                sh "docker tag project-pipeline-temp $IMAGE_NAME:$IMAGE_TAG"
+                sh 'docker build -t sheeeeeeeeeeeeeeeeeeeeeeeeeeep/project-pipeline:latest .'
             }
         }
         stage('Syed Ali - Login to DockerHub') {
@@ -26,7 +25,7 @@ pipeline {
         }
         stage('Syed Ali - Push Image to Dockerhub') {
             steps {
-                sh 'docker push $IMAGE_NAME:$IMAGE_TAG'
+                sh 'docker push sheeeeeeeeeeeeeeeeeeeeeeeeeeep/project-pipeline:latest'
             }
         }
     }
