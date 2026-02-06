@@ -7,12 +7,6 @@ pipeline {
     }
 
     stages {
-        stage('Syed Ali - Checkout') {
-            steps {
-                checkout scm
-            }
-        }
-
         stage('Syed Ali - Build Docker Image') {
             steps {
                 sh 'docker build -t $IMAGE_NAME:$IMAGE_TAG .'
